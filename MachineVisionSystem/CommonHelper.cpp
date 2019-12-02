@@ -7,7 +7,7 @@
 * 1. 定义一个QFileDialog对象
 * 2. 设置路径、过滤器等属性
 *****************************************/
-string CommonHelper::selectFile()
+string CommonHelper::selectImage()
 {
 	//定义文件对话框类
 	QFileDialog *fileDialog = new QFileDialog();

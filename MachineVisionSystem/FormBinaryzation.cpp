@@ -16,7 +16,7 @@ FormBinaryzation::FormBinaryzation(QWidget *parent)
 
 void FormBinaryzation::ReadImage()
 {
-	 string path = CommonHelper::selectFile();
+	 string path = CommonHelper::selectImage();
 	 srcImage = cv::imread(path);
 	 CommonHelper::showImage(ui.labelPicIn, srcImage);
 }

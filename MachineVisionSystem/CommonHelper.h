@@ -14,6 +14,6 @@ class CommonHelper
 public:
 	static void showImage(QLabel* label, cv::Mat mat);
 
-	static string selectFile();
+	static string selectImage();
 };
 
