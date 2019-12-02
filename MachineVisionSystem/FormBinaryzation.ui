@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormBinaryzationClass</class>
+ <widget class="QWidget" name="FormBinaryzationClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>807</width>
+    <height>462</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>二值化</string>
+  </property>
+  <widget class="QPushButton" name="btnReadImage">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>读取图像</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnThreshold">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>50</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>二值化</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>64</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>阈值：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>64</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>最大阈值：</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbThresholdType">
+   <property name="geometry">
+    <rect>
+     <x>511</x>
+     <y>56</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>THRESH_BINARY</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_BINARY_INV </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_TRUNC</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_TOZERO</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_TOZERO_INV</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_MASK</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_OTSU</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_TRIANGLE</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>63</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>阈值类型：</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBoxThresh">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>60</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>255</number>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBoxMaxThresh">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>60</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>255</number>
+   </property>
+   <property name="value">
+    <number>255</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAdaptiveThreshold">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>92</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>自适应二值化</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbAdaptiveThresholdType">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>100</y>
+     <width>171</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>ADAPTIVE_THRESH_MEAN_C</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADAPTIVE_THRESH_GAUSSIAN_C</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>自适应阈值算法：</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbThresholdType_2">
+   <property name="geometry">
+    <rect>
+     <x>511</x>
+     <y>97</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>THRESH_BINARY</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>THRESH_BINARY_INV </string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>104</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>阈值类型：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>104</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>最大阈值：</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBoxMaxThresh_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>100</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>255</number>
+   </property>
+   <property name="value">
+    <number>255</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>200</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>原始图</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>200</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>二值化</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>200</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>自适应二值化</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>140</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>邻域块大小：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>140</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>偏移值调整量：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditBolckSize">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>140</y>
+     <width>51</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditConst">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>140</y>
+     <width>51</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicOut1">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>230</y>
+     <width>250</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicIn">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>230</y>
+     <width>250</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicOut2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>230</y>
+     <width>250</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <zorder>labelPicOut1</zorder>
+  <zorder>labelPicIn</zorder>
+  <zorder>labelPicOut2</zorder>
+  <zorder>label</zorder>
+  <zorder>btnReadImage</zorder>
+  <zorder>btnThreshold</zorder>
+  <zorder>label_2</zorder>
+  <zorder>cmbThresholdType</zorder>
+  <zorder>label_3</zorder>
+  <zorder>spinBoxThresh</zorder>
+  <zorder>spinBoxMaxThresh</zorder>
+  <zorder>btnAdaptiveThreshold</zorder>
+  <zorder>cmbAdaptiveThresholdType</zorder>
+  <zorder>label_4</zorder>
+  <zorder>cmbThresholdType_2</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>spinBoxMaxThresh_2</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_11</zorder>
+  <zorder>lineEditBolckSize</zorder>
+  <zorder>lineEditConst</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnReadImage</sender>
+   <signal>clicked()</signal>
+   <receiver>FormBinaryzationClass</receiver>
+   <slot>btnReadImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>67</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnThreshold</sender>
+   <signal>clicked()</signal>
+   <receiver>FormBinaryzationClass</receiver>
+   <slot>btnThreshold()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAdaptiveThreshold</sender>
+   <signal>clicked()</signal>
+   <receiver>FormBinaryzationClass</receiver>
+   <slot>btnAdaptiveThreshold()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>738</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>730</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnThreshold()</slot>
+  <slot>btnReadImage()</slot>
+  <slot>btnAdaptiveThreshold()</slot>
+ </slots>
+</ui>

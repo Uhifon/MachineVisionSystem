@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MachineVisionSystemClass</class>
+ <widget class="QMainWindow" name="MachineVisionSystemClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>768</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MachineVisionSystem</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btnBinarizeTool">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>二值化</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MachineVisionSystem.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnBinarizeTool</sender>
+   <signal>clicked()</signal>
+   <receiver>MachineVisionSystemClass</receiver>
+   <slot>btnBinarizeTool()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnBinarizeTool()</slot>
+ </slots>
+</ui>
