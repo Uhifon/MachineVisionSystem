@@ -8,12 +8,13 @@
 
 
 using namespace std;
+using namespace cv;
 
 class CommonHelper
 {
 public:
-	static void showImage(QLabel* label, cv::Mat mat);
-
+	static void showImage(QLabel* label, Mat mat);
 	static string selectImage();
+	static QImage MatImageToQt(Mat &src);
 };
 
