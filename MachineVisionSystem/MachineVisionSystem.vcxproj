@@ -96,6 +96,7 @@
   <ItemGroup>
     <ClCompile Include="CommonHelper.cpp" />
     <ClCompile Include="FormBinaryzation.cpp" />
+    <ClCompile Include="FormMorphological.cpp" />
     <ClCompile Include="MachineVisionSystem.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -104,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="FormBinaryzation.ui" />
+    <QtUic Include="FormMorphological.ui" />
     <QtUic Include="MachineVisionSystem.ui" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonHelper.h" />
+    <QtMoc Include="FormMorphological.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

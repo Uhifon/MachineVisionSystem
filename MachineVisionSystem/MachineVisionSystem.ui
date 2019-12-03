@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>768</width>
-    <height>1024</height>
+    <height>483</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,27 @@
    <widget class="QPushButton" name="btnBinarizeTool">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
+      <x>130</x>
+      <y>60</y>
       <width>111</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>二值化</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMorphologicalTool">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>形态学处理</string>
     </property>
    </widget>
   </widget>
@@ -38,7 +51,7 @@
    <sender>btnBinarizeTool</sender>
    <signal>clicked()</signal>
    <receiver>MachineVisionSystemClass</receiver>
-   <slot>btnBinarizeTool()</slot>
+   <slot>btnBinarizeToolClick()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>92</x>
@@ -50,8 +63,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnMorphologicalTool</sender>
+   <signal>clicked()</signal>
+   <receiver>MachineVisionSystemClass</receiver>
+   <slot>btnMorphologicalToolClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>227</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
-  <slot>btnBinarizeTool()</slot>
+  <slot>btnBinarizeToolClick()</slot>
+  <slot>btnMorphologicalToolClick()</slot>
  </slots>
 </ui>

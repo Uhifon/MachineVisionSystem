@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormMorphologicalClass</class>
+ <widget class="QWidget" name="FormMorphologicalClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>660</width>
+    <height>433</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>形态学处理</string>
+  </property>
+  <widget class="QPushButton" name="btnReadImage">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>读取图像</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbMorphologicalMethod">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>30</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>腐蚀Erode</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>膨胀Dilate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>开运算Open</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>闭运算Close</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>梯度Gradient</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>顶帽TopHat</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>黑帽BlackHat</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>击中击不中HitMiss</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>33</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>形态学运算：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnStart">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>40</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>处理</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicIn">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>300</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>100</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>原图</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicOut">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>130</y>
+     <width>300</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>100</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>结果图</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>30</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>内核：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditKernel">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>28</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>30</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>内迭代次数：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditIterations">
+   <property name="geometry">
+    <rect>
+     <x>505</x>
+     <y>27</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>386</x>
+     <y>63</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>锚点：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditAncho_x">
+   <property name="geometry">
+    <rect>
+     <x>426</x>
+     <y>60</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-1</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditAncho_y">
+   <property name="geometry">
+    <rect>
+     <x>478</x>
+     <y>60</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>65</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>，</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>70</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>边界模式：</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbBorderType">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>60</y>
+     <width>151</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>BORDER_CONSTANT</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_REPLICATE</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_REFLECT</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_WRAP</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_REFLECT_101</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_TRANSPARENT</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_REFLECT101</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_DEFAULT</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BORDER_ISOLATED</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,6 +1,4 @@
 #include "FormBinaryzation.h"
-#include  <opencv2\imgproc.hpp> 
-#include  <opencv2\world.hpp>
 #include "CommonHelper.h"
 
 FormBinaryzation::FormBinaryzation(QWidget *parent)
@@ -11,6 +9,8 @@ FormBinaryzation::FormBinaryzation(QWidget *parent)
 	connect(ui.btnReadImage, SIGNAL(clicked()), this, SLOT(ReadImage()));
 	connect(ui.btnThreshold, SIGNAL(clicked()), this, SLOT(Threshold()));
 	connect(ui.btnAdaptiveThreshold, SIGNAL(clicked()), this, SLOT(AdaptiveThreshold()));
+ 
+
 }
 
 
@@ -49,6 +49,8 @@ void FormBinaryzation::AdaptiveThreshold()
 	cv::AdaptiveThresholdTypes adaptiveThresholdType = (cv::AdaptiveThresholdTypes)ui.cmbAdaptiveThresholdType->currentIndex();
 	cv::Mat srcGray;
 	cv::cvtColor(srcImage, srcGray, cv::COLOR_BGR2GRAY);
+
+
     cv::adaptiveThreshold(srcGray, dstImage, maxThresh, adaptiveThresholdType, thresholdType, blocksize,c);
 	CommonHelper::showImage(ui.labelPicOut2, dstImage);
 }

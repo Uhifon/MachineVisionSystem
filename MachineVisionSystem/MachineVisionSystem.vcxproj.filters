@@ -37,6 +37,9 @@
     <ClCompile Include="CommonHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FormMorphological.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MachineVisionSystem.h">
@@ -45,12 +48,18 @@
     <QtMoc Include="FormBinaryzation.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="FormMorphological.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MachineVisionSystem.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="FormBinaryzation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="FormMorphological.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

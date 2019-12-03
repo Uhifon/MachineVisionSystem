@@ -20,5 +20,8 @@ signals:
 
 
 private slots:
-     void BinarizeDialogShow();
+	void ThresholdFormShow();
+    void MorphologicalFormShow();
+
+
 };
