@@ -5,12 +5,9 @@ FormBinaryzation::FormBinaryzation(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-
 	connect(ui.btnReadImage, SIGNAL(clicked()), this, SLOT(ReadImage()));
 	connect(ui.btnThreshold, SIGNAL(clicked()), this, SLOT(Threshold()));
 	connect(ui.btnAdaptiveThreshold, SIGNAL(clicked()), this, SLOT(AdaptiveThreshold()));
- 
-
 }
 
 
@@ -33,6 +30,7 @@ void FormBinaryzation::Threshold()
 	cv::Mat srcGray;
 	cv::cvtColor(srcImage, srcGray, cv::COLOR_BGR2GRAY);
 	double res = cv::threshold(srcGray, dstImage, thresh, maxThresh, thresholdType);
+
 	CommonHelper::showImage(ui.labelPicOut1, dstImage);
 }
 
@@ -44,13 +42,10 @@ void FormBinaryzation::AdaptiveThreshold()
 	double maxThresh = ui.spinBoxMaxThresh_2->value();
 	int blocksize = ui.lineEditBolckSize->text().toDouble();
 	double c = ui.lineEditConst->text().toDouble() ;
-	
 	cv::ThresholdTypes thresholdType = (cv::ThresholdTypes)ui.cmbThresholdType_2->currentIndex();
 	cv::AdaptiveThresholdTypes adaptiveThresholdType = (cv::AdaptiveThresholdTypes)ui.cmbAdaptiveThresholdType->currentIndex();
 	cv::Mat srcGray;
 	cv::cvtColor(srcImage, srcGray, cv::COLOR_BGR2GRAY);
-
-
     cv::adaptiveThreshold(srcGray, dstImage, maxThresh, adaptiveThresholdType, thresholdType, blocksize,c);
 	CommonHelper::showImage(ui.labelPicOut2, dstImage);
 }
