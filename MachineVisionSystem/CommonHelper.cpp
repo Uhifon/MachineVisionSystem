@@ -32,9 +32,7 @@ string CommonHelper::selectImage()
 //显示图像
 void CommonHelper::showImage(QLabel* label, Mat mat)
 {
-	imwrite("dst.jpg", mat);
 	QImage image = MatImageToQt(mat);
-	image.save("1.jpg");
 	label->setPixmap(QPixmap::fromImage(image).scaled(label->size()));  //以label的大小显示图像
 	label->show();
 }

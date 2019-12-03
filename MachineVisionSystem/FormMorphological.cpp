@@ -30,7 +30,7 @@ void FormMorphological::MorphologicalOperate()
 	cv::Mat srcGray;
 	cv::cvtColor(srcImage, srcGray, cv::COLOR_BGR2GRAY);
     //输入图像可以是任意的， 但深度应该是CV_8U，CV_16U，CV_16S，CV_32F或CV_64F之一。
-	cv::morphologyEx(srcGray,srcGray,type, kernel, ancho, iterations, borderType);
+	cv::morphologyEx(srcGray, dstImage,type, kernel, ancho, iterations, borderType);
 	CommonHelper::showImage(ui.labelPicOut, dstImage);
  
 }
