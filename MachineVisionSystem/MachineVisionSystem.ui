@@ -40,6 +40,58 @@
      <string>形态学处理</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>30</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>预处理</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>基础处理</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnFilteringTool">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>160</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>滤波</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnColorExtractionTool">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>颜色提取</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
@@ -79,9 +131,43 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnFilteringTool</sender>
+   <signal>clicked()</signal>
+   <receiver>MachineVisionSystemClass</receiver>
+   <slot>btnFilteringToolClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>185</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnColorExtractionTool</sender>
+   <signal>clicked()</signal>
+   <receiver>MachineVisionSystemClass</receiver>
+   <slot>btnColorExtractionToolClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>123</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>btnBinarizeToolClick()</slot>
   <slot>btnMorphologicalToolClick()</slot>
+  <slot>btnFilteringToolClick()</slot>
+  <slot>btnColorExtractionToolClick()</slot>
  </slots>
 </ui>

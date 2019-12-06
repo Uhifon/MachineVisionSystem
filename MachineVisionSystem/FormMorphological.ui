@@ -89,7 +89,7 @@
     <string>形态学运算：</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnStart">
+  <widget class="QPushButton" name="btnMorphologic">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -334,5 +334,42 @@
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btnReadImage</sender>
+   <signal>clicked()</signal>
+   <receiver>FormMorphologicalClass</receiver>
+   <slot>btnReadImageClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnMorphologic</sender>
+   <signal>clicked()</signal>
+   <receiver>FormMorphologicalClass</receiver>
+   <slot>btnMorphlogicClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>600</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>607</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnReadImageClick()</slot>
+  <slot>btnMorphologicClick()</slot>
+ </slots>
 </ui>

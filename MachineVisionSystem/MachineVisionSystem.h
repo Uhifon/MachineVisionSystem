@@ -1,7 +1,6 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-
 #include "ui_MachineVisionSystem.h"
 
 
@@ -14,14 +13,11 @@ public:
 
 private:
 	Ui::MachineVisionSystemClass ui;
-	 
-
-signals:
-
 
 private slots:
-	void ThresholdFormShow();
-    void MorphologicalFormShow();
-
+    void btnBinarizeToolClick();
+	void btnFilteringToolClick();
+	void btnMorphologicalToolClick();
+	void btnColorExtractionToolClick();
 
 };

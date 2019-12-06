@@ -6,19 +6,20 @@ FormMorphological::FormMorphological(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-	connect(ui.btnReadImage, SIGNAL(clicked()), this, SLOT(ReadImage()));
-	connect(ui.btnStart, SIGNAL(clicked()), this, SLOT(MorphologicalOperate()));
 }
 
-void FormMorphological::ReadImage()
+//获取图像
+void FormMorphological::btnReadImageClick()
 {
 	string path = CommonHelper::selectImage();
+	if (path == "")
+		return;
 	srcImage = cv::imread(path);
-	CommonHelper::showImage(ui.labelPicIn, srcImage);
+	CommonHelper::showImage((QLabelEx*)ui.labelPicIn, srcImage);
 }
 
 //形态学运算
-void FormMorphological::MorphologicalOperate()
+void FormMorphological::btnMorphologicClick()
 {
 	cv::MorphTypes type = (cv::MorphTypes)ui.cmbMorphologicalMethod->currentIndex();
 	int kernel = ui.lineEditKernel->text().toInt();      //内核 结构元素 
@@ -31,6 +32,6 @@ void FormMorphological::MorphologicalOperate()
 	cv::cvtColor(srcImage, srcGray, cv::COLOR_BGR2GRAY);
     //输入图像可以是任意的， 但深度应该是CV_8U，CV_16U，CV_16S，CV_32F或CV_64F之一。
 	cv::morphologyEx(srcGray, dstImage,type, kernel, ancho, iterations, borderType);
-	CommonHelper::showImage(ui.labelPicOut, dstImage);
+	CommonHelper::showImage((QLabelEx*)ui.labelPicOut, dstImage);
  
 }

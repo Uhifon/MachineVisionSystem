@@ -96,15 +96,20 @@
   <ItemGroup>
     <ClCompile Include="CommonHelper.cpp" />
     <ClCompile Include="FormBinaryzation.cpp" />
+    <ClCompile Include="FormColorExtraction.cpp" />
+    <ClCompile Include="FormFiltering.cpp" />
     <ClCompile Include="FormMorphological.cpp" />
     <ClCompile Include="MachineVisionSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="QLabelEx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MachineVisionSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="FormBinaryzation.ui" />
+    <QtUic Include="FormColorExtraction.ui" />
+    <QtUic Include="FormFiltering.ui" />
     <QtUic Include="FormMorphological.ui" />
     <QtUic Include="MachineVisionSystem.ui" />
   </ItemGroup>
@@ -116,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonHelper.h" />
+    <QtMoc Include="QLabelEx.h" />
+    <QtMoc Include="FormColorExtraction.h" />
+    <QtMoc Include="FormFiltering.h" />
     <QtMoc Include="FormMorphological.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

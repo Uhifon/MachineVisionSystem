@@ -27,11 +27,14 @@ string CommonHelper::selectImage()
 	}
 	for (auto tmp : fileNames)
 		return tmp.toLocal8Bit();
+	return "";
+
 }
 
 //显示图像
-void CommonHelper::showImage(QLabel* label, Mat mat)
+void CommonHelper::showImage(QLabelEx* label, Mat mat)
 {
+	 
 	QImage image = MatImageToQt(mat);
 	label->setPixmap(QPixmap::fromImage(image).scaled(label->size()));  //以label的大小显示图像
 	label->show();

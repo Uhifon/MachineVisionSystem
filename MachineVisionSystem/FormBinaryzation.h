@@ -1,10 +1,7 @@
 #pragma once
 #include <QWidget>
 #include "ui_FormBinaryzation.h"
-#include  <opencv2\core.hpp>
 #include  <opencv2\opencv.hpp>
-#include  <opencv2\imgproc.hpp> 
-#include  <opencv2\world.hpp>
  
 
 class FormBinaryzation:public QWidget
@@ -18,9 +15,9 @@ private:
 	cv::Mat srcImage;
 	cv::Mat dstImage;
 private slots:
-	void ReadImage();
-	void Threshold();
-	void AdaptiveThreshold();
+	void btnReadImageClick();
+	void btnThresholdClick();
+	void btnAdaptiveThresholdClick();
 
 };
 

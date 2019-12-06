@@ -40,6 +40,15 @@
     <ClCompile Include="FormMorphological.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FormFiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormColorExtraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QLabelEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MachineVisionSystem.h">
@@ -51,6 +60,15 @@
     <QtMoc Include="FormMorphological.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="FormFiltering.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FormColorExtraction.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QLabelEx.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MachineVisionSystem.ui">
@@ -60,6 +78,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="FormMorphological.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="FormFiltering.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="FormColorExtraction.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

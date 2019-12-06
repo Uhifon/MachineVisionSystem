@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
-    <height>462</height>
+    <width>800</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -384,7 +384,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelPicIn">
@@ -400,7 +400,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelPicOut2">
@@ -416,7 +416,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <zorder>labelPicOut1</zorder>

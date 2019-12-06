@@ -5,22 +5,22 @@ FormBinaryzation::FormBinaryzation(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-	connect(ui.btnReadImage, SIGNAL(clicked()), this, SLOT(ReadImage()));
-	connect(ui.btnThreshold, SIGNAL(clicked()), this, SLOT(Threshold()));
-	connect(ui.btnAdaptiveThreshold, SIGNAL(clicked()), this, SLOT(AdaptiveThreshold()));
+
 }
 
 
-void FormBinaryzation::ReadImage()
+void FormBinaryzation::btnReadImageClick()
 {
 	 string path = CommonHelper::selectImage();
+	 if (path == "")
+		 return;
 	 srcImage = cv::imread(path);
-	 CommonHelper::showImage(ui.labelPicIn, srcImage);
+	 CommonHelper::showImage((QLabelEx*)ui.labelPicIn, srcImage);
 }
  
 
 //二值化处理
-void FormBinaryzation::Threshold()
+void FormBinaryzation::btnThresholdClick()
 {
 	if (!srcImage.data)
 		return ;
@@ -31,11 +31,11 @@ void FormBinaryzation::Threshold()
 	cv::cvtColor(srcImage, srcGray, cv::COLOR_BGR2GRAY);
 	double res = cv::threshold(srcGray, dstImage, thresh, maxThresh, thresholdType);
 
-	CommonHelper::showImage(ui.labelPicOut1, dstImage);
+	CommonHelper::showImage((QLabelEx*)ui.labelPicOut1, dstImage);
 }
 
 //自适应二值化
-void FormBinaryzation::AdaptiveThreshold()
+void FormBinaryzation::btnAdaptiveThresholdClick()
 {
 	if (!srcImage.data)
 		return;
@@ -47,5 +47,5 @@ void FormBinaryzation::AdaptiveThreshold()
 	cv::Mat srcGray;
 	cv::cvtColor(srcImage, srcGray, cv::COLOR_BGR2GRAY);
     cv::adaptiveThreshold(srcGray, dstImage, maxThresh, adaptiveThresholdType, thresholdType, blocksize,c);
-	CommonHelper::showImage(ui.labelPicOut2, dstImage);
+	CommonHelper::showImage((QLabelEx*)ui.labelPicOut2, dstImage);
 }

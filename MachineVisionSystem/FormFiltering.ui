@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormFilteringClass</class>
+ <widget class="QWidget" name="FormFilteringClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>477</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图像滤波</string>
+  </property>
+  <widget class="QPushButton" name="btnReadImage">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>读取图像</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>271</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>线性滤波</string>
+   </property>
+   <widget class="QPushButton" name="btnBoxFilter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>方框滤波</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBlur">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>40</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>均值滤波</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGaussianBlur">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>40</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>高斯滤波</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>10</y>
+     <width>261</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>线性滤波</string>
+   </property>
+   <widget class="QPushButton" name="btnBilateralFilter">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>40</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>双边滤波</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMedianBlur">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>中值滤波</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>160</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>原始图</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicIn">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>190</y>
+     <width>300</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>160</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>处理后图</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicOut">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>190</y>
+     <width>300</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnBoxFilter</sender>
+   <signal>clicked()</signal>
+   <receiver>FormFilteringClass</receiver>
+   <slot>btnBoxFilterClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnReadImage</sender>
+   <signal>clicked()</signal>
+   <receiver>FormFilteringClass</receiver>
+   <slot>btnReadImageClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>57</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnGaussianBlur</sender>
+   <signal>clicked()</signal>
+   <receiver>FormFilteringClass</receiver>
+   <slot>btnGaussianBlurClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>334</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBlur</sender>
+   <signal>clicked()</signal>
+   <receiver>FormFilteringClass</receiver>
+   <slot>btnBlurClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnMedianBlur</sender>
+   <signal>clicked()</signal>
+   <receiver>FormFilteringClass</receiver>
+   <slot>btnMedianBlurClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>520</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>516</x>
+     <y>129</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBilateralFilter</sender>
+   <signal>clicked()</signal>
+   <receiver>FormFilteringClass</receiver>
+   <slot>btnBilateralFilterClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>607</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>607</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnBoxFilterClick()</slot>
+  <slot>btnBlurClick()</slot>
+  <slot>btnReadImageClick()</slot>
+  <slot>btnGaussianBlurClick()</slot>
+  <slot>btnMedianBlurClick()</slot>
+  <slot>btnBilateralFilterClick()</slot>
+ </slots>
+</ui>
