@@ -5,7 +5,7 @@ FormBinaryzation::FormBinaryzation(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-
+	
 }
 
 
@@ -15,7 +15,7 @@ void FormBinaryzation::btnReadImageClick()
 	 if (path == "")
 		 return;
 	 srcImage = cv::imread(path);
-	 CommonHelper::showImage((QLabelEx*)ui.labelPicIn, srcImage);
+	 CommonHelper::showImage(ui.labelPicIn, srcImage);
 }
  
 

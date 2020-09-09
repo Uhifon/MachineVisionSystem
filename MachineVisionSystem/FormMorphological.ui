@@ -115,7 +115,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -144,7 +144,7 @@
     <enum>QFrame::Box</enum>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -355,7 +355,7 @@
    <sender>btnMorphologic</sender>
    <signal>clicked()</signal>
    <receiver>FormMorphologicalClass</receiver>
-   <slot>btnMorphlogicClick()</slot>
+   <slot>btnMorphologicClick()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>600</x>

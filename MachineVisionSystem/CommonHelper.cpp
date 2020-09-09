@@ -32,7 +32,7 @@ string CommonHelper::selectImage()
 }
 
 //ÏÔÊ¾Í¼Ïñ
-void CommonHelper::showImage(QLabelEx* label, Mat mat)
+void CommonHelper::showImage(QLabel* label, Mat mat)
 {
 	 
 	QImage image = MatImageToQt(mat);

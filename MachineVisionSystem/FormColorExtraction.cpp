@@ -6,10 +6,9 @@ FormColorExtraction::FormColorExtraction(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-	ui.labelPicIn = (QLabelEx*)(ui.labelPicIn);
-    connect(ui.labelPicIn, SIGNAL(clicked()), this, SLOT(LabelPicInClick()));
-
-
+	 
+	
+	/*connect(ui.labelPicIn, SIGNAL(linkActivated(QString)), this, SLOT(LabelPicInClick(QString)));*/
 }
 
 void FormColorExtraction::btnReadImageClick()
@@ -18,7 +17,7 @@ void FormColorExtraction::btnReadImageClick()
 	if (path=="")
 		return;
 	srcImage = cv::imread(path);
-	CommonHelper::showImage((QLabelEx*)ui.labelPicIn, srcImage);
+	CommonHelper::showImage(ui.labelPicIn, srcImage);
 }
  
 

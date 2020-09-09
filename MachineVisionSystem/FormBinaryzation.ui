@@ -451,7 +451,7 @@
    <sender>btnReadImage</sender>
    <signal>clicked()</signal>
    <receiver>FormBinaryzationClass</receiver>
-   <slot>btnReadImage()</slot>
+   <slot>btnReadImageClick()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>67</x>
@@ -467,7 +467,7 @@
    <sender>btnThreshold</sender>
    <signal>clicked()</signal>
    <receiver>FormBinaryzationClass</receiver>
-   <slot>btnThreshold()</slot>
+   <slot>btnThresholdClick()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>150</x>
@@ -483,7 +483,7 @@
    <sender>btnAdaptiveThreshold</sender>
    <signal>clicked()</signal>
    <receiver>FormBinaryzationClass</receiver>
-   <slot>btnAdaptiveThreshold()</slot>
+   <slot>btnAdaptiveThresholdClick()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>738</x>
@@ -497,8 +497,8 @@
   </connection>
  </connections>
  <slots>
-  <slot>btnThreshold()</slot>
-  <slot>btnReadImage()</slot>
-  <slot>btnAdaptiveThreshold()</slot>
+  <slot>btnThresholdClick()</slot>
+  <slot>btnReadImageClick()</slot>
+  <slot>btnAdaptiveThresholdClick()</slot>
  </slots>
 </ui>

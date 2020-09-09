@@ -15,7 +15,7 @@ void FormFiltering::btnReadImageClick()
 	if (path == "")
 		return;
 	srcImage = cv::imread(path);
-	CommonHelper::showImage((QLabelEx*)ui.labelPicIn, srcImage);
+	CommonHelper::showImage(ui.labelPicIn, srcImage);
 }
 
 //·½¿òÂË²¨

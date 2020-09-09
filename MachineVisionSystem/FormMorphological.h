@@ -17,6 +17,6 @@ private:
 
 private slots :
 	void btnReadImageClick();
-    void btnMorphologicClick();
+    void btnMorphologicClick();  
 };
 
