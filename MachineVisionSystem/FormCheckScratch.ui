@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormCheckScratchClass</class>
+ <widget class="QWidget" name="FormCheckScratchClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>726</width>
+    <height>458</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>划痕检测</string>
+  </property>
+  <widget class="QPushButton" name="btnReadImage">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>读取图像</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCheck">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>30</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>开始检测</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicIn">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>331</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPicIn_2">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>130</y>
+     <width>331</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnReadImage</sender>
+   <signal>clicked()</signal>
+   <receiver>FormCheckScratchClass</receiver>
+   <slot>btnReadImageClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>74</x>
+     <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnCheck</sender>
+   <signal>clicked()</signal>
+   <receiver>FormCheckScratchClass</receiver>
+   <slot>btnCheckClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>95</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnReadImageClick()</slot>
+  <slot>btnCheckClick()</slot>
+ </slots>
+</ui>

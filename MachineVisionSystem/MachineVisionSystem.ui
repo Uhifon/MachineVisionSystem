@@ -92,6 +92,32 @@
      <string>颜色提取</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnCheckScratch">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>160</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>划痕检测</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>30</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>实操项目</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
@@ -163,11 +189,28 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btnCheckScratch</sender>
+   <signal>clicked()</signal>
+   <receiver>MachineVisionSystemClass</receiver>
+   <slot>btnCheckScratchClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>632</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>608</x>
+     <y>-29</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>btnBinarizeToolClick()</slot>
   <slot>btnMorphologicalToolClick()</slot>
   <slot>btnFilteringToolClick()</slot>
   <slot>btnColorExtractionToolClick()</slot>
+  <slot>btnCheckScratchClick()</slot>
  </slots>
 </ui>

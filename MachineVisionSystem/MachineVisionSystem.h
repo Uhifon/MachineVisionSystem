@@ -19,5 +19,5 @@ private slots:
 	void btnFilteringToolClick();
 	void btnMorphologicalToolClick();
 	void btnColorExtractionToolClick();
-
+	void btnCheckScratchClick();
 };

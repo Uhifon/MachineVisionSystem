@@ -49,6 +49,9 @@
     <ClCompile Include="QLabelEx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FormCheckScratch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MachineVisionSystem.h">
@@ -69,6 +72,9 @@
     <QtMoc Include="QLabelEx.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="FormCheckScratch.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MachineVisionSystem.ui">
@@ -84,6 +90,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="FormColorExtraction.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="FormCheckScratch.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

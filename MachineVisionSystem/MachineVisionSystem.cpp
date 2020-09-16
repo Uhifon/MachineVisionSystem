@@ -7,6 +7,8 @@
 #include "FormMorphological.h"
 #include "FormFiltering.h"
 #include "FormColorExtraction.h"
+#include "FormCheckScratch.h"
+
 
 using namespace std;
 
@@ -44,5 +46,9 @@ void MachineVisionSystem::btnColorExtractionToolClick()
 
 }
 
+void MachineVisionSystem::btnCheckScratchClick()
+{
+	FormCheckScratch *form = new FormCheckScratch();
+	form->show();
 
-
+}

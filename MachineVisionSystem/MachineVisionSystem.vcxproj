@@ -98,6 +98,7 @@
   <ItemGroup>
     <ClCompile Include="CommonHelper.cpp" />
     <ClCompile Include="FormBinaryzation.cpp" />
+    <ClCompile Include="FormCheckScratch.cpp" />
     <ClCompile Include="FormColorExtraction.cpp" />
     <ClCompile Include="FormFiltering.cpp" />
     <ClCompile Include="FormMorphological.cpp" />
@@ -109,6 +110,7 @@
     <QtMoc Include="MachineVisionSystem.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="FormCheckScratch.ui" />
     <QtUic Include="FormBinaryzation.ui" />
     <QtUic Include="FormColorExtraction.ui" />
     <QtUic Include="FormFiltering.ui" />
@@ -123,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonHelper.h" />
+    <QtMoc Include="FormCheckScratch.h" />
     <QtMoc Include="QLabelEx.h" />
     <QtMoc Include="FormColorExtraction.h" />
     <QtMoc Include="FormFiltering.h" />
